@@ -13,6 +13,7 @@ import LinkingConfiguration from './LinkingConfiguration';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/Ionicons';
 import {Home} from '../scene/home';
+import {Home2} from '../scene/home2';
 import {Settings} from '../scene/settings';
 import {MyWebView} from '../scene/webview';
 
@@ -23,6 +24,7 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
     <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="TabNav" component={TabNav} options={{ headerShown: false }} />
+          <Stack.Screen name="Home2" component={Home2} />
           <Stack.Screen name="MyWebView" component={MyWebView} />
           <Stack.Screen name="SettingsNav" component={Settings} />
         </Stack.Navigator>
@@ -38,6 +40,14 @@ function TabNav() {
       <Tab.Screen name="HomeTab" component={Home} 
         options={{
           tabBarLabel: 'Home',
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="home" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen name="HomeTab2" component={Home2} 
+        options={{
+          tabBarLabel: 'Home2',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="home" color={color} size={size} />
           ),

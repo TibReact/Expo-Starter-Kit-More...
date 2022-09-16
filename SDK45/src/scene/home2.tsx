@@ -1,8 +1,8 @@
 import React,{ useState,useEffect }  from 'react';
 import { StyleSheet,View,ActivityIndicator } from 'react-native';
-import { MenuGridList } from '../../layout/menu-grid-list';
+import { MenuList } from '../../layout/menu-list';
 
-export const Home = (props): React.ReactElement => {
+export const Home2 = (props): React.ReactElement => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export const Home = (props): React.ReactElement => {
   else
     return (
       <View style={styles.safeArea}>
-        <MenuGridList
+        <MenuList
           data={data}
           onItemPress={onItemPress}
         />
